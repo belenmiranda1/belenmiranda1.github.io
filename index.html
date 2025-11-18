@@ -1,0 +1,334 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Belén Yesmy Miranda Bascopé | Psicología Organizacional</title>
+  <style>
+    :root {
+      --yellow: #FFF4D9;
+      --pink: #FFD1DC;
+      --soft-pink: #FF9EC8;
+      --accent: #FF85B3;
+      --text: #444;
+      --gray: #666;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--yellow);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--pink);
+      padding: 2.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .title {
+      font-size: 1.3rem;
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav {
+      padding: 1.5rem 1rem;
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .tab {
+      padding: 1rem 2rem;
+      background: var(--pink);
+      border: none;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255,133,179,0.2);
+    }
+
+    .tab:hover, .tab:focus {
+      background: var(--soft-pink);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(255,133,179,0.3);
+      outline: none;
+    }
+
+    .tab.active {
+      background: var(--accent);
+      color: white;
+    }
+
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      width: 100%;
+    }
+
+    .content {
+      display: none;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 24px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      animation: fade 0.5s ease;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid var(--pink);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    .statement {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: var(--gray);
+      background: var(--yellow);
+      padding: 2rem;
+      border-radius: 18px;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
+
+    .section-title {
+      color: var(--accent);
+      margin: 2rem 0 1rem;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    li {
+      padding: 0.6rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+    }
+
+    li::before {
+      content: "✿";
+      color: var(--soft-pink);
+      position: absolute;
+      left: 0;
+      font-size: 1.3rem;
+    }
+
+    .job {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px dashed var(--pink);
+    }
+
+    .job:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .date {
+      font-weight: bold;
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .ref {
+      font-size: 0.95rem;
+      color: var(--gray);
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--pink);
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .tab { padding: 0.9rem 1.5rem; font-size: 1rem; }
+      .content { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Belén Yesmy Miranda Bascopé</h1>
+    <p class="title">Psicología Organizacional</p>
+    <div class="contact">
+      <p>Quinto Anillo, radial 17 y ½ → **********</p>
+      <p>Teléfono → ********</p>
+      <p><a href="mailto:Belenmiranda2207@gmail.com">Belenmiranda2207@gmail.com</a></p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="tabs">
+      <button class="tab active" data-target="about">Sobre mí</button>
+      <button class="tab" data-target="experience">Experiencia</button>
+      <button class="tab" data-target="education">Formación y Actividades</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Sobre mí -->
+    <div id="about" class="content active">
+      <h2>Sobre mí</h2>
+      <p class="statement">
+        Me gusta pensar que conforme avanzo en mi carrera me transformo en un mediador entre el bienestar individual y el crecimiento colectivo. He tenido la oportunidad de haber trabajado en entornos clínicos y organizacionales, donde confirmé que mi mayor fortaleza está en conectar personas, motivarlas y ayudarlas a crecer. Mi meta es seguir desarrollando estas habilidades para impulsar el bienestar personal y en espacios de trabajo, convirtiéndolos en lugares más saludables y productivos.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+        <div>
+          <h3 class="section-title">Habilidades blandas</h3>
+          <ul>
+            <li>Comunicación asertiva y escucha activa</li>
+            <li>Aprendizaje rápido y adaptabilidad al cambio</li>
+            <li>Liderazgo democrático – transformacional</li>
+            <li>Trabajo en equipo y colaboración interárea</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="section-title">Habilidades técnicas</h3>
+          <ul>
+            <li>Manejo de Excel, Photoshop, Power Point, Word y sistemas administrativos.</li>
+            <li>Conocimiento en procesos de afiliación a seguros de salud</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experiencia -->
+    <div id="experience" class="content">
+      <h2>Experiencia</h2>
+
+      <div class="job">
+        <div class="date">[MARZO 2025] – [ACTUALIDAD]</div>
+        <strong>Auxiliar de RRHH / SUMIVID@.COM</strong>
+        <p>Comencé como pasante en marzo y en junio tuve la oportunidad de ser contratada. Aprendí a realizar entrevistas filtro y revisar currículums, además de apoyar en trámites como afiliaciones, bajas médicas y vacaciones. También me encargué del control de caja chica e inventarios, y una de mis mayores contribuciones fue capacitar al equipo en el nuevo sistema de la empresa, lo que fortaleció mis habilidades de liderazgo y mejoró la productividad.</p>
+        <div class="ref">REF. Guely Bascope 77751086</div>
+      </div>
+
+      <div class="job">
+        <div class="date">[2025]</div>
+        <strong>Rehabilitación cognitiva / hogar Madre Teresa de Calcuta</strong>
+        <p>Realicé rehabilitación cognitiva a 3 adultos mayores del hogar madre teresa de Calcuta mediante juegos de estimulación de memoria y atención.</p>
+        <div class="ref">REF: Daniela Calzadilla 75066999</div>
+      </div>
+
+      <div class="job">
+        <div class="date">[2024]</div>
+        <strong>Capacitación / Colegio Gastón Guillaux</strong>
+        <p>Capacité a estudiantes de penúltimo y último año de secundaria sobre bullying en redes sociales, aplicando un liderazgo transformacional para motivarlos a valorarse a sí mismos en lugar de compararse con otros. Para lograrlo, utilicé dinámica fomenté la participación con preguntas abiertas, escuchando activamente sus respuestas. Esto generó confianza y permitió que los adolescentes se expresaran con mayor libertad.</p>
+        <div class="ref">REF: Daniela Calzadilla 75066999</div>
+      </div>
+
+      <div class="job">
+        <div class="date">[2024]</div>
+        <strong>Test Bender / Kinder Caritas II</strong>
+        <p>Realicé la aplicación de test Bender a los estudiantes del kínder Caritas II y entregué informes tanto al colegio como a los padres.</p>
+        <div class="ref">REF: Daniela Calzadilla 75066999</div>
+      </div>
+    </div>
+
+    <!-- Formación y Actividades -->
+    <div id="education" class="content">
+      <h2>Formación</h2>
+      <ul>
+        <li>Bachiller en humanidades / Colegio La Roca 2022</li>
+        <li>Certificación en Photoshop y PowerPoint / Microsoft</li>
+        <li>Inglés B2 / TOEFL IBT</li>
+      </ul>
+
+      <h2 class="section-title" style="margin-top: 3rem;">Actividades</h2>
+      <ul>
+        <li>En el CREAUPB propuse una idea a mi grupo “nannys safe” el cual quedó en segundo lugar, plantee muy bien la idea de como funcionaría para que podamos presentarla a profesionales reconocidos.</li>
+        <li>Fuera del ámbito académico soy coach en el gimnasio donde entreno, guio y motivo a otros mientras continúo formándome; actualmente estoy tomando un curso de preparación para competencia en J3 University.</li>
+        <li>Hice voluntariado en La Muela del Diablo (La Paz), llevando comida a niños, organizando y realizando actividades con ellos.</li>
+        <li>Además formo parte del club de teatro de la universidad, donde participé en una obra interactiva y estamos preparando una obra inspirada en la leyenda de “La Viudita” donde seré la protagonista.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Belén Yesmy Miranda Bascopé — Portafolio Personal
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-target');
+
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        contents.forEach(c => {
+          c.classList.remove('active');
+          if (c.id === target) c.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+```
