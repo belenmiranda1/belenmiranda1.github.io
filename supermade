@@ -1,0 +1,33 @@
+supermade-store/
+├── public/
+│   ├── images/
+│   └── _redirects
+├── src/
+│   ├── components/
+│   │   ├── CartDrawer.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Logo.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── PlaceholderImage.jsx
+│   │   ├── ProductCard.jsx
+│   │   └── SectionHeading.jsx
+│   ├── context/
+│   │   └── CartContext.jsx
+│   ├── data/
+│   │   └── products.json
+│   ├── pages/
+│   │   ├── About.jsx
+│   │   ├── Cart.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Home.jsx
+│   │   ├── ProductDetail.jsx
+│   │   └── Shop.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── .gitignore
+└── README.md
